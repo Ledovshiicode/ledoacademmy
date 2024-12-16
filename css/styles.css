@@ -4216,29 +4216,51 @@ html.no-csstransitions .s-hero__content {
     background-size: contain;
 }
 
-.service-icon--product-design {
-    background-image: url(../images/icons/services/icon-product-design.svg);
+.service-icon--product-design::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f0c3'; /* أيقونة الورش الحضورية */
+    font-weight: 900;
 }
 
-.service-icon--branding {
-    background-image: url(../images/icons/services/icon-branding.svg);
+.service-icon--branding::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f108'; /* أيقونة الورش الأونلاين */
+    font-weight: 900;
 }
 
-.service-icon--frontend {
-    background-image: url(../images/icons/services/icon-frontend.svg);
+.service-icon--frontend::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f121'; /* أيقونة الدروس المستمرة */
+    font-weight: 900;
 }
 
-.service-icon--research {
-    background-image: url(../images/icons/services/icon-research.svg);
+.service-icon--research::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f086'; /* أيقونة التواصل المباشر */
+    font-weight: 900;
 }
 
-.service-icon--illustration {
-    background-image: url(../images/icons/services/icon-illustration.svg);
+.service-icon--illustration::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f118'; /* أيقونة الدروس التفاعلية */
+    font-weight: 900;
 }
 
-.service-icon--ecommerce {
-    background-image: url(../images/icons/services/icon-ecommerce.svg);
+.service-icon--ecommerce::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f091'; /* أيقونة المسابقات */
+    font-weight: 900;
 }
+
+/* ضبط الشكل العام للأيقونات */
+.service-icon::before {
+    display: inline-block;
+    font-size: 3rem; /* حجم الأيقونة */
+    color: hsla(345, 93%, 54%, 1);; /* لون الأيقونة - أحمر */
+    margin-bottom: 1rem;
+}
+
+
 
 
 /* ------------------------------------------------------------------- 
