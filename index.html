@@ -88,7 +88,6 @@
         <div class="s-hero__bg">
             <div class="gradient-overlay"></div>
         </div>
-
         <div class="row s-hero__content">
             <div class="column">
 
@@ -119,14 +118,22 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
                 <span class="s-hero__video-text">تشغيل  الفيديو</span>
             </a>
+
+
+            
         </div>
+         
+        
 
         <div class="s-hero__scroll">
             <a href="#about" class="s-hero__scroll-link smoothscroll">
                 حرك للأسفل
             </a>
+            <div>
+                عدد الزوار: <span id="visitor-count">0</span>
+            </div>
         </div>
-
+        
     </section> <!-- end s-hero -->
 
 
@@ -156,6 +163,7 @@
                 
             </div>
 
+        
             <div class="column large-6 w-900-stack s-about__photo-block">
                 <div class="s-about__photo" data-aos="fade-up"></div>
             </div>
@@ -646,7 +654,24 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
+    <script>
+        // الحصول على عدد الزوار من localStorage
+        let visitorCount = localStorage.getItem('visitorCount');
+    
+        // إذا لم يكن هناك عداد، قم بتعيين العدّاد إلى 0
+        if (!visitorCount) {
+            visitorCount = 0;
+        }
+    
+        // زيادة العدد بمقدار 1
+        visitorCount++;
+    
+        // تخزين العدد الجديد في localStorage
+        localStorage.setItem('visitorCount', visitorCount);
+    
+        // عرض العدد في الصفحة
+        document.getElementById('visitor-count').textContent = visitorCount;
+    </script>
 </body>
 
 </html>
